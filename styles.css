@@ -1,10 +1,15 @@
 body {
+  font-family: Arial, sans-serif;
   background: linear-gradient(to right, #74ebd5, #acb6e5);
+  padding: 20px;
+  margin: 0;
 }
 
 .container {
+  max-width: 500px;
+  margin: auto;
   background-color: #ffffff;
-  padding: 30px 25px;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
@@ -14,34 +19,63 @@ body {
   transform: scale(1.01);
 }
 
-input[type="text"],
-input[type="range"],
-select {
-  border: 1px solid #bbb;
-  transition: 0.2s border ease;
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-input[type="text"]:focus,
-select:focus {
-  border-color: #4285f4;
-  outline: none;
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="range"],
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[disabled] {
+  background-color: #f2f2f2;
+  color: #555;
+  font-weight: bold;
 }
 
 input[type="range"] {
   accent-color: #4285f4;
 }
 
-h1 {
-  font-size: 28px;
-  color: #333;
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
 }
 
-label {
-  color: #333;
-}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
 
-input[disabled] {
-  background-color: #f9f9f9;
-  font-weight: 600;
-  color: #444;
+  h1 {
+    font-size: 22px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    font-size: 13px;
+  }
 }
