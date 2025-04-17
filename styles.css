@@ -1,0 +1,47 @@
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+input[type="text"],
+input[type="range"],
+select {
+  border: 1px solid #bbb;
+  transition: 0.2s border ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+input[type="range"] {
+  accent-color: #4285f4;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+label {
+  color: #333;
+}
+
+input[disabled] {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #444;
+}
